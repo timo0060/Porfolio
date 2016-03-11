@@ -1,16 +1,20 @@
-var app = angular.module('Portfolio', ['ngRoute']);
-
-app.config(function($routeProvider, $locationProvider){
+var app = angular.module('Portfolio', ['ngRoute','ui.router']);
     
-    $routeProvider
-    .when('/', {
-        controller: 'homeCtrl',
-        templateUrl: 'res/templates/home.html'
-    }).when('/contact', {
-        controller: 'contactCtrl',
-        templateUrl: 'res/templates/contact.html'
-    }).otherwise({
-        redirectTo: '/'
+app.config(function($stateProvider, $urlRouterProvider){
+    
+    $urlRouterProvider.otherwise('/home');
+    
+    $stateProvider.state('home', {
+        url: "/home",
+        templateUrl: "res/templates/home.html"
+    })
+    .state("contact", {
+        url: "/contact",
+        templateUrl: "res/templates/contact.html"
     });
     
-});
+    $urlRouterProvider.when('', '/home');
+    
+}
+          
+);
