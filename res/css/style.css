@@ -8,9 +8,10 @@ body{
     border: 0;
 }
 
-.content .panel-heading{
-    border-radius: 7px;
-    border-bottom: 5px solid #1C4D78;
+.content-panel-heading{
+    border-radius: 7px !important;
+    border-bottom: 5px solid #1C4D78 !important;
+    background-color: #2E65B2 !important;
 }
 
 .content .panel-body{
@@ -66,4 +67,41 @@ ul.skill li:before{
     left: -1em;
     top: 0.9em;
     position: relative;
+}
+
+.contact-paragraph{
+    font-size: 15px;
+    font-weight: 500;
+    background-color: white;
+    padding: 0.5em 2em;
+    border-radius: 8px;
+    border: 2px solid #D9D9D9;
+    text-align: center;
+}
+
+.contact-form{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 1.5em 1.5em;
+    border-radius: 10px;
+    border: 2px solid #D9D9D9;
+    background-color: white;
+}
+
+.contact-form input.ng-invalid.ng-dirty{
+    border: 1px solid red;
+}
+
+.contact-form button{
+    margin-top: 1em;
+}
+
+span.form-error{
+    padding-left: 0.5em;
+    font-size: 14px;
+    color:red;
+}
+
+.thanksMessage{
+    text-align: center;
 }

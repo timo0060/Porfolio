@@ -10,7 +10,8 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
     .state("contact", {
         url: "/contact",
-        templateUrl: "res/templates/contact.html"
+        templateUrl: "res/templates/contact.html",
+        controller: 'ContactCtrl as contact'
     });
     
     $urlRouterProvider.when('', '/home');
