@@ -10,15 +10,14 @@ $message = $data->message;
 
 
 $to = 'RadderTim@gmail.com';
-
 $body = <<<EMAIL
 
-NAME: $name
-FROM: $email
-SUBJECT: $subject
+FROM: $name 
+----------------------------------------------
 
 $message
 
+----------------------------------------------
 EMAIL;
 
 $header = "From: $email";
@@ -28,5 +27,15 @@ if(mail($to, $subject, $body, $header)){
 }else{
     echo 'error';
 }
+
+
+/*$to = 'timo0060@gmail.com';
+$headers = "From: $email";
+
+if(mail($to, $subject, $message, $headers)){
+    echo "Success";
+}else{
+    echo "Failure!";
+}*/
 
 ?>
