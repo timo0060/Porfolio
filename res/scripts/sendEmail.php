@@ -28,14 +28,4 @@ if(mail($to, $subject, $body, $header)){
     echo 'error';
 }
 
-
-/*$to = 'timo0060@gmail.com';
-$headers = "From: $email";
-
-if(mail($to, $subject, $message, $headers)){
-    echo "Success";
-}else{
-    echo "Failure!";
-}*/
-
 ?>
