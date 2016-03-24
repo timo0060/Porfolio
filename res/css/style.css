@@ -3,9 +3,14 @@ body{
     font-family: Ubuntu;
     padding-top: 0px;
     margin-top: 0px;
+    background-color: white;
 }
 .content .panel{
     border: 0;
+}
+
+.jumbotron{
+    background-color: white !important;
 }
 
 .content-panel-heading{
@@ -26,13 +31,6 @@ body{
     border-top: 0;
 }
 
-.jumbotron.Profile{
-    background-color: white;
-    border: 2px solid #e7e7e7;
-    border-radius: 10px !important;
-    border-bottom: 5px solid #919191;
-    padding: 1em 2em;
-}
 
 .subPanelHeader{
     font-family: UbuntuBold;
@@ -135,4 +133,15 @@ p.work-desc{
 
 .interests>ul{
     margin-left: 3em;
+}
+
+@media(min-width:751px){
+    .jumbotron.Profile{
+        background-color: white;
+        border: 2px solid #e7e7e7;
+        border-radius: 10px !important;
+        border-bottom: 5px solid #919191;
+        padding: 1em 2em;
+    }
+
 }
