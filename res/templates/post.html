@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 page-controls">
+            <a class="noDeco" ui-sref="blog">
+                <span class="fa-stack">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i>
+                </span>
+                <span>Back</span>
+            </a>
+        </div>
+        <div class="col-sm-12 post-display">
+            <div class="col-sm-12 post-header">
+                <h2 class="header">{{post.title}}</h2>
+                <span class="pull-right created-date">{{post.created}}</span>
+                <div class="hr-wrapper">
+                    <hr>
+                </div>
+            </div>
+            <div class="col-sm-12 post-content" ng-bind-html="post.content"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container content">
+    <div class="row">
+        <div class="content">
+            <h2>Welcome</h2>
+            <hr>
+            <div class="col-sm-12 posts" ng-repeat="post in posts | orderBy: '-created'" ng-show="hasPosts">
+                <a class="divLink" ui-sref="post({id: post.id})">
+                    <div class="post">
+                        <h3 class="header">{{post.title}}</h3>
+                        <span class="pull-right created-date">
+                            {{post.created}}
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-12" ng-show="!hasPosts">
+                No Posts have been found!
+            </div>
+        </div>
+    </div>
+</div>
