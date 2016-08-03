@@ -1,9 +1,13 @@
 @font-face {
     font-family: Ubuntu;
-    src: url(res/fonts/Ubuntu-R.ttf);
+    src: url(../../res/fonts/Ubuntu-R.ttf);
 }
 @font-face {
-    font-family: Ubuntu;
-    src: url(res/fonts/Ubuntu-B.ttf);
+    font-family: UbuntuBold;
+    src: url(../../res/fonts/Ubuntu-B.ttf);
     font-weight: bold;
+}
+@font-face{
+    font-family: LeagueGothic;
+    src: url(../../res/fonts/LeagueGothic-Regular.otf)
 }
