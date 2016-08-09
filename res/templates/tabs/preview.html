@@ -1,0 +1,26 @@
+<div class="col-sm-12 post-link-display">
+    <h2>Blog Post Link</h2>
+    <div class="post">
+        <h3 class="header">{{post.title}}</h3>
+        <span class="pull-right created-date">
+            {{post.created}}
+        </span>
+        <div class="post-description">
+            {{post.description}}
+        </div>
+    </div>
+</div>
+<div class="col-sm-12 post-display">
+    <h2>Post Content</h2>
+    <div class="col-sm-12 post-header">
+        <h2 class="header">{{post.title}}</h2>
+        <span class="pull-right created-date">{{post.created}}</span>
+        <div class="hr-wrapper">
+            <hr>
+        </div>
+    </div>
+    <div class="col-sm-12 post-content" ng-bind-html="post.content"></div>
+    <div class="pull-right">
+        <button class="btn btn-success" ng-click="savePost()">Save</button>
+    </div>
+</div>

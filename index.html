@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="res/css/style.css">
     <link rel="stylesheet" href="res/css/blog-style.css">
     <link rel="stylesheet" href="res/libs/font-awesome-4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="res/css/post.css"/>
     
     <link rel="icon" type="image/png" href="res/img/favicons/logo%202_32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="res/img/favicons/logo%202_32.png" sizes="32x32" />
@@ -21,7 +22,9 @@
     <script src="res/libs/angular-route.min.js"></script>
     <script src="res/libs/ui-router.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
-    <script src="res/scripts/app.js"></script>
+    <script src="res/libs/angular-animate.min.js"></script>
+    <script src="res/libs/ui-bootstrap-tpls.js"></script>
+    <script src="res/libs/ui-router-tabs.js"></script>    
 </head>
 <body>
     <nav class="navbar navbar-custom">
@@ -50,9 +53,17 @@
     </nav>
     <div ui-view></div>
     
+    <script src="res/scripts/app.js"></script>
+    
+    <script src="res/services/AuthenticateService.js"></script>
+    
     <script src="res/controllers/homeCtrl.js"></script>
     <script src="res/controllers/contactCtrl.js"></script>
     <script src="res/controllers/blogCtrl.js"></script>
     <script src="res/controllers/postCtrl.js"></script>
+    <script src="res/controllers/loginCtrl.js"></script>
+    <script src="res/controllers/adminCtrl.js"></script>
+    <script src="res/controllers/newPostCtrl.js"></script>
+    <script src="res/controllers/editCtrl.js"></script>
 </body>
 </html>

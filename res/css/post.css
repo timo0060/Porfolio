@@ -1,0 +1,8 @@
+.image-grid{
+    margin-top: 2em;
+}
+
+.image-grid>.image-grid-image{
+    display: inline-block;
+    width: 300px;
+}

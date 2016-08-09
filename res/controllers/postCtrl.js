@@ -1,4 +1,7 @@
-app.controller("PostCtrl", function($scope, $http, $stateParams){
+app.controller("PostCtrl", function($scope, $http, $sce, $stateParams){
+    
+    $scope.preview = false;
+    
     $scope.id = $stateParams.id;
     
     var data = {
@@ -8,6 +11,7 @@ app.controller("PostCtrl", function($scope, $http, $stateParams){
     $http.post("res/scripts/getPost.php", data).success(function(res){
         if(!res.error){
             $scope.post = res.post[0];
+            $scope.post.content = $sce.trustAsHtml($scope.post.content);
         }else{
             console.log(res.errorMsg);
         }

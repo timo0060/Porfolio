@@ -14,11 +14,19 @@ if($result = $conn->query($q)){
     $postCount = 0;
     
     while($row = mysqli_fetch_array($result)){
+        
+        if($row['description'] == null){
+            $description = "No description was provided.";
+        }else{
+            $description = $row['description'];
+        }
+        
         $posts[] = array(
             "id" => $row['id'],
             "title" => $row['title'],
             "content" => $row['content'],
-            "created" => $row['created']
+            "created" => $row['created'],
+            "description" => $description
         );
         $postCount++;
     }

@@ -45,13 +45,19 @@ hr{
     margin: 0.5em 0.25em;
 }
 
-.post-display{
+.post-display, .post-link-display, .post-controls{
     height: auto;
     background-color: #F0F0F0;
     padding: 1em 1.5em;
+    padding-top: 0em;
     border: 2px solid #DEDEDE;
     border-bottom: 4px solid #DEDEDE;
     border-radius: 10px;
+    margin-bottom: 2em;
+}
+
+.post-display>h2, .post-link-display>h2{
+    color: #235396;
 }
 
 .post-header{
@@ -61,4 +67,47 @@ hr{
 .post-content{
     padding: 0.25em 1em;
     text-indent: 2em;
+}
+.posts{
+    margin: 0.75em 0;
+}
+
+.post-description{
+    text-indent: 2em;
+    margin-top: 0.75em;
+    padding: 0.5em;
+    border: 1px solid #C7C7C7;
+    border-radius: 5px;
+    color: #000!important;
+}
+
+.control-pills{
+    margin-bottom: 1.5em;
+}
+
+.nav-tabs{
+    margin-bottom: 1em;
+}
+
+.nav-tabs:first-child{
+    padding-left: 0.75em;
+}
+
+.nav-tabs>li>a{
+    background-color: #EDEDED;
+    color: #000000;
+    padding: 0.5em 0.75em;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus{
+    background-color: #DEDEDE;
+}
+
+.nav-tabs>li>a:hover, .nav-tabs>li.active>a:hover{
+    color: #A3C2CF;
+    background-color: #EDEDED;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px 8px 0px 0px;
 }

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="clr"></div>
+        <div class="col-sm-4 col-sm-offset-4">
+            <fieldset>
+                <legend>Login</legend>
+                <span class="error" id="LoginError"></span>
+                <form name="loginForm" ng-submit="login()">
+                    <div class="form-group">
+                        <label for="user">Username</label>
+                        <input type="text" class="form-control" ng-model="loginForm.username" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" ng-model="loginForm.password" required>
+                    </div>
+                    <input type="submit" value="Login" class="btn btn-primary pull-right" ng-disabled="loginForm.$invalid">
+                    <button type="button" class="btn btn-danger pull-left" ng-click="clearForm()">Clear</button>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>

@@ -18,6 +18,9 @@
                 </div>
             </div>
             <div class="col-sm-12 post-content" ng-bind-html="post.content"></div>
+            <div class="pull-right" ng-show="preview">
+                <button class="btn btn-success" ng-click="savePost()">Save</button>
+            </div>
         </div>
     </div>
 </div>

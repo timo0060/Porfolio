@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">      
+        <div class="col-sm-12">
+            <a class="noDeco" ui-sref="admin">
+                <span class="fa-stack">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i>
+                </span>
+                <span>Back</span>
+            </a>
+        </div>
+        <div class="col-sm-6"><h1>Edit</h1></div>
+        <div class="col-sm-6"><span class="pull-right"><br><button class="btn btn-danger" ng-click="logout()">Logout <i class="fa fa-sign-out"></i></button></span></div>
+        <div class="col-sm-12"><hr></div>
+        <div class="col-sm-12">
+            <!--<tabs data="tabs" type="tabs"></tabs>-->
+            <div class="tabs">
+                <uib-tabset>
+                    <uib-tab ng-repeat="tab in tabs" heading="{{tab.heading}}" ui-sref="{{tab.route}}" active="tab.active">
+                    </uib-tab>
+                </uib-tabset>
+            </div>
+            <div ui-view></div>
+        </div>
+    </div>
+</div>

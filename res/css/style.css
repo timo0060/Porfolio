@@ -4,6 +4,17 @@ body{
     margin-top: 0px;
     background-color: white;
 }
+
+.clr{
+    clear: both;
+}
+
+.error{
+    text-align: center;
+    color: red;
+    font-weight: 400;
+}
+
 .content .panel{
     border: 0;
 }
@@ -136,6 +147,20 @@ p.work-desc{
 
 .interest-title{
     padding-left: 1.5em;
+}
+
+.form-bordered{
+    border: 2px solid #CCCCCC;
+    border-bottom: 4px solid #BFBFBF;
+    border-radius: 5px;
+    padding: 1em 1.5em;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+}
+
+.right-align{
+    text-align: right;
 }
 
 @media(min-width:751px){

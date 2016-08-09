@@ -1,4 +1,4 @@
-app.controller("BlogCtrl", function($scope, $http){
+app.controller("BlogCtrl", function($scope, $http){ 
     
     $scope.hasPosts = false;
     
