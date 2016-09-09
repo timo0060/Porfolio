@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Angular Sanitize" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/public/res/libs/angular-sanitize.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/public/res/libs/angular-sanitize.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

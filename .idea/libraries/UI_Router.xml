@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="UI Router" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/public/res/libs/angular-ui-router.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/public/res/libs/angular-ui-router.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

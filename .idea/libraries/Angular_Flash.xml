@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Angular Flash" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/public/res/libs/angular-flash.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/public/res/libs/angular-flash.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
