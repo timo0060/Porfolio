@@ -36,20 +36,20 @@ $app->post('/api/login', function ($request, $response){
             $stmt->bind_param('ss', $token, $logged_in);
 
             if($stmt->execute()){
-                $response->withJson($data, 200);
+                $status = 200;
             }else{
                 $data = array(
                     "flash" => 'danger',
                     "message" => '<strong>ERROR:</strong> Could not login! Please try again later!'
                 );
-                $response->withJson($data, 403);
+                $status = 403;
             }
         }else{
             $data = array(
                 "flash" => 'danger',
                 "message" => '<strong>ERROR:</strong> The Username/Password you have entered is incorrect. Please try again.'
             );
-            $response->withJson($data, 403);
+            $status = 401;
         }
     }else{
         $data = array(
@@ -57,8 +57,8 @@ $app->post('/api/login', function ($request, $response){
             "message" => '<strong>ERROR:</strong> Could Not Run the SQL'
         );
 
-        $response->withJson($data, 500);
+        $status = 500;
     }
 
-    return $response;
+    return $response->withJson($data, $status);
 });
