@@ -1,7 +1,7 @@
 /**
  * Created by Tim on 9/6/2016.
  */
-app.controller('LoginController', function ($scope, $http, $log, Flash, $state) {
+angular.module('Portfolio').controller('LoginController', function ($scope, $http, $log, Flash, $state) {
     $log.debug("Login Controller");
     $scope.login = {};
 
@@ -11,16 +11,12 @@ app.controller('LoginController', function ($scope, $http, $log, Flash, $state) 
             password: $scope.login.password
         };
         $http.post('http://server.timothyradder:443/api/login', data).success(function (data, status) {
-            if(status == 200) {
-                var message = data.message;
-                var id = Flash.create(data.flash, message, 3000, {}, true);
-                //$state.go('home');
-            }else{
-                var message = data.message;
-                var id = Flash.create(data.flash, message, 3000, {}, true);
-            }
+            var message = data.message;
+            var id = Flash.create(data.flash, message, 3000, {}, true);
+            $state.go('admin');
         }).error(function (error) {
-            $log.error(error);
+            var message = data.message;
+            var id = Flash.create(data.flash, message, 3000, {}, true);
         });
     };
 
