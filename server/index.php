@@ -26,5 +26,6 @@ $app->add(function ($req, $res, $next) {
 });
 
 require_once 'api/login.php';
+require_once 'api/auth.php';
 
 $app->run();

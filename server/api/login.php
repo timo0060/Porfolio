@@ -12,16 +12,15 @@ $app->post('/api/login', function ($request, $response){
     $q = "SELECT * FROM blog_admin WHERE username = ? AND password = ?";
 
     $stmt = $mysqli->prepare($q);
-    $stmt->bind_param('ss', $user, $pass);
-
     $user = $request->getParsedBody()['username'];
     $pass = md5($request->getParsedBody()['password']);
+    $stmt->bind_param('ss', $user, $pass);
 
     if($stmt->execute()){
         $stmt->store_result();
 
         if($stmt->num_rows > 0){
-            $token = md5(uniqid($user, true));
+            $token = $user . '|'.md5(uniqid($user, true));
             date_default_timezone_set("America/Toronto");
             $logged_in = date('Y/m/d');
             $data = array(
@@ -61,4 +60,27 @@ $app->post('/api/login', function ($request, $response){
     }
 
     return $response->withJson($data, $status);
+});
+
+$app->post('/api/logout', function ($request, $response){
+    require_once 'db.php';
+
+    $token_pieces = explode('|', $request->getParsedBody()['_token']);
+    $_token = $request->getParsedBody()['_token'];
+    $user = $token_pieces[0];
+    $hasError = true;
+
+    $q = "UPDATE blog_admin SET _token='NOT_LOGGED_IN' WHERE username=?";
+    $stmt = $mysqli->prepare($q);
+    $stmt->bind_param('s',$user);
+
+    if($stmt->execute()){
+        $hasError = false;
+    }
+
+    $data = array(
+        "error" => $hasError
+    );
+
+    return $response->withJson($data, 200);
 });

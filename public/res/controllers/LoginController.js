@@ -13,7 +13,9 @@ angular.module('Portfolio').controller('LoginController', function ($scope, $htt
         $http.post('http://server.timothyradder:443/api/login', data).success(function (data, status) {
             var message = data.message;
             var id = Flash.create(data.flash, message, 3000, {}, true);
-            $state.go('admin');
+            sessionStorage.setItem('_token', JSON.stringify(data._token));
+            sessionStorage.setItem('last_logged', JSON.stringify(data.logged_in));
+            $state.go('admin', {}, { reload: true });
         }).error(function (error) {
             var message = data.message;
             var id = Flash.create(data.flash, message, 3000, {}, true);
